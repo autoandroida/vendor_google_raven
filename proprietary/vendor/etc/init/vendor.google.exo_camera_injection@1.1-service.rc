@@ -1,0 +1,13 @@
+service vendor.exo-camera-injection-hal-1-1 /vendor/bin/hw/vendor.google.exo_camera_injection@1.1-service
+    interface android.hardware.camera.provider@2.4::ICameraProvider dynamic/0
+    interface android.hardware.camera.provider@2.5::ICameraProvider dynamic/0
+    interface vendor.google.exo_camera_injection@1.0::IExoCameraInjection default
+    interface vendor.google.exo_camera_injection@1.1::IExoCameraInjection default
+    oneshot
+    disabled
+    class hal
+    user cameraserver
+    group audio camera input drmrpc usb
+    ioprio rt 4
+    capabilities SYS_NICE
+    task_profiles CameraServiceCapacity MaxPerformance

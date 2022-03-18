@@ -1,0 +1,12 @@
+<manifest version="1.0" type="device">
+    <hal format="hidl">
+        <name>vendor.google.exo_camera_injection</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IExoCameraInjection/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.5::ICameraProvider/dynamic/0</fqname>
+    </hal>
+</manifest>
